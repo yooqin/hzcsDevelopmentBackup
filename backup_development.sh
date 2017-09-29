@@ -13,7 +13,7 @@ filename="development-www-$day.tar.gz"
 
 echo $filename
 
-tar -Cczvf $filename $backdir
+tar -czvf $filename $backdir
 
 openssl aes-128-cbc -salt -k $password -in $filename -out "$filename.aes"
 
