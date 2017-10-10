@@ -29472,3 +29472,7 @@
 /home/yooqin/www/sports_lottery/README/
 /home/yooqin/www/sports_lottery/README/README.md
 /home/yooqin/www/sports_lottery/.env
+[master 57e1716] add backup 20171010001001
+ 3 files changed, 24 insertions(+), 3 deletions(-)
+ create mode 100644 development-mysql-20171010001001.tar.gz.aes
+ create mode 100644 development-www-20171010001001.tar.gz.aes

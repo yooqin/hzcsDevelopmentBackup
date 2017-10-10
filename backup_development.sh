@@ -24,13 +24,13 @@ mysqldump -uroot -p'e(YY33b..' sportslottery > $sqldir/sportslottery.dump
 mysqldump -uroot -p'e(YY33b..' oa > $sqldir/oa.dump
 mysqldump -uroot -p'e(YY33b..' mayflowes > $sqldir/mayflowes.dump
 
-tar -czvf $sqlfilename $sqldir
+tar -czf $sqlfilename $sqldir
 openssl aes-128-cbc -salt -k $password -in $sqlfilename -out "$sqlfilename.aes"
 rm $sqlfilename
 #end BackMysql
 
 echo "-----Backup PHP"
-tar -czvf $filename $backdir
+tar -czf $filename $backdir
 openssl aes-128-cbc -salt -k $password -in $filename -out "$filename.aes"
 rm $filename
 
