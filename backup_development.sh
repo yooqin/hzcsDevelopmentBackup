@@ -23,16 +23,18 @@ rm $sqldir/*.dump
 mysqldump -uroot -p'e(YY33b..' sportslottery > $sqldir/sportslottery.dump
 mysqldump -uroot -p'e(YY33b..' oa > $sqldir/oa.dump
 mysqldump -uroot -p'e(YY33b..' mayflowes > $sqldir/mayflowes.dump
+mysqldump -uroot -p'e(YY33b..' fund > $sqldir/fund.dump
 
 tar -czf $sqlfilename $sqldir
 openssl aes-128-cbc -salt -k $password -in $sqlfilename -out "$sqlfilename.aes"
 rm $sqlfilename
 #end BackMysql
 
-echo "-----Backup PHP"
-tar -czf $filename $backdir
-openssl aes-128-cbc -salt -k $password -in $filename -out "$filename.aes"
-rm $filename
+#不再备份代码
+#echo "-----Backup PHP"
+#tar -czf $filename $backdir
+#openssl aes-128-cbc -salt -k $password -in $filename -out "$filename.aes"
+#rm $filename
 
 git add -A
 git commit -am "add backup $day"
